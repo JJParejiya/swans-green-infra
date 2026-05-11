@@ -36,6 +36,42 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 ::selection{background:var(--leaf);color:var(--ink)}
 
+/* ---------- Caps-font normalization ----------
+   Trajan Pro / Felix Titling / Cinzel only have uppercase glyphs and render
+   "lowercase" as small-caps, which makes the first letter of each word look
+   larger than the rest. Every element using --serif or --display is forced
+   to uppercase so the typography is symmetric on every device. */
+.hero-h1,.hero-h1 .accent,.hero-projects a,.search-cell .val,.hero-card .lbl,
+.hero-card-feature .meta h4,.hero-card-feature .meta .hcf-title,
+.section-head h2,.section-head h2 em,
+.manifesto-copy h1,.manifesto-copy h2,.manifesto-copy h3,
+.manifesto-copy h1 em,.manifesto-copy h2 em,.manifesto-copy h3 em,
+.ps-title,.ps-title em,.ps-tag,.ps-stats em,
+.rr-body h3,
+.prop-card .meta h3,
+.exp-mt-body h3,.exp-mt-body h3 em,.exp-mt-body .exp-mt-tag,
+.am-item .am-name,
+.loc-card h4,
+.story-copy h3,.story-copy h3 em,
+.vox-name,.vox-heading,.vox-heading em,
+.cta-inner h2,.cta-inner h2 em,
+.foot-col ul a,.foot-col address strong,
+.popup-aside h3,.popup-title,.popup-success h4,
+.listing-hero h1,.listing-hero h1 em,
+.listing-card .lc-body h3,.listing-card .lc-body .lc-price,
+.detail-hero h1,.detail-hero h1 em,
+.gallery .g .g-more,
+.detail-section h2,
+.spec-grid .s .v,
+.amen-list li,
+.contact-card h3,.contact-card .contact-form-success h4,
+.clients-head h2,.clients-head h2 em,.client-name,
+.faq-head h2,.faq-head h2 em,.faq-q,
+.contact-form-wrap h2,.contact-form-wrap h2 em,
+.cir-body address strong,
+.thanks h1,.thanks-step h3,
+.nav-menu a{text-transform:uppercase}
+
 /* ---------- Utility ---------- */
 .container{width:100%;max-width:1480px;margin:0 auto;padding:0 40px}
 .container-tight{max-width:1200px;margin:0 auto;padding:0 40px}
